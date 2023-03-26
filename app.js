@@ -102,7 +102,7 @@ App({
     userInfo: null,
     word: '',
     typeId:'',
-    apiUrl: 'http://x.veision.com/api/xcx/index.aspx',
-    hostUrl: 'https://x.veision.com',
+    apiUrl: 'https://www.xhqzbzx.com/api/xcx/index.aspx',
+    hostUrl: 'https://www.xhqzbzx.com',
   }
 })

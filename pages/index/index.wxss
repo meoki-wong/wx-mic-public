@@ -58,3 +58,56 @@
 }
 .swiper_item navigator{  height: 81rpx;}
 .more{font-size: 28rpx;color: #9c9c9c; width: 15%;}
+
+
+
+
+.block {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 20rpx;
+  background: #fff;
+  height: auto;
+  overflow: hidden;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+}
+
+.block .title {
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 96%;
+  font-size: 28rpx;
+  text-align: center;
+  margin-left: 3%;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+
+.news {
+  width: 96%;
+  margin-left: 2%;
+}
+
+.news .item {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 10rpx;
+}
+
+.news .item .tit {
+  float: left;
+  font-size: 24rpx;
+  width: 78%;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.news .item .riqi {
+  float: right;
+  margin-right: 10rpx;
+  color: #666;
+}

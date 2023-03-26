@@ -11,15 +11,23 @@
        <input type='text' placeholder='搜索商品名称' value="{{word}}"   bindinput="searchActiveChangeinput" bindblur='searchSubmit'></input>
     </view>
   </view>
-  <view class='list'>
-   <block wx:for="{{typeList}}" wx:key="{{item.id}}">
+  <view class="list-contain">
+    <view class="nav-bar">
+    <view class="{{index == activeNav? 'active_nav' : ''}} nav-item" wx:for="{{navList}}" wx:key="{{item.id}}" bindtap='clickNavItem' data-order="{{index}}">{{item.title}}</view>
+  </view>
+  <scroll-view scroll-y="{{true}}" class='list'>
+   <block wx:for="{{Housedaipai}}" wx:key="{{item.id}}">
     <view class='li'>
-    <navigator url='/pages/goods_list/goods_list?typeId={{item.id}}'>
-      <view class='li_img'><image src='{{hostUrl}}{{item.img_url}}' class='pic'></image></view>
-      {{item.title}}
+    <navigator url='/pages/goods_list/goods_list?typeId={{item.id}}' style="width: 100%">
+      <view class="title-item">
+        <view>{{item.accountNo}}{{item.seat}}</view>
+        <view>{{item.contractStartDate}}</view>
+      </view>
       </navigator>
     </view>
     </block>
+
+  </scroll-view>
   </view>
   <include src="../footer/footer.wxml"/>
 </view>

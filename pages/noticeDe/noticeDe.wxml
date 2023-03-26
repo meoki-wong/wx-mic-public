@@ -1,9 +1,28 @@
 <!--公告pages/notice/notice.wxml-->
 
 <view class='li'>
-  <import src="/wxParse/wxParse.wxml" />
-      <view class="wxParse">
-      <template is="wxParse" data="{{wxParseData:article_content.nodes}}"></template>
-      </view>
+  <h1 class="finTit">{{model.title}}</h1>
+
+    <view class="finInf">
+        <view class="inf">
+            <em>{{model.updateTime}}</em>
+        <b class="ori">
+</b>
+        </view>
+
+    
+    </view>
+    
+
+
+    <view class="finCnt" style="">
+          
+    <rich-text class="para" nodes="{{model.content}}">
+      
+    </rich-text >
+
+    </view>
+
 </view>
+
 

@@ -37,9 +37,8 @@ Page({
     that.getArticlePage();//读取公告
     that.getProductIsRecommend();//读取店长推荐
     that.getProductOne();//读取产品
-    that.getProductTwo();//读取产品
-    that.getProductThree();//读取产品
-    that.getProductFour();//读取产品
+   
+    that.getHouseLease();//读取非住宅信息
   },
   getBanner: function (typeId) {//读取首页banner
     var that = this;
@@ -109,6 +108,36 @@ Page({
       }
     })
   },
+
+
+
+
+  getHouseLease: function (typeId) {//读取非住宅信息
+    var that = this;
+    wx.request({
+      url: app.globalData.apiUrl,
+      data: {
+        opt: 'getHouseLease',
+        classId: 0,
+        page:1,
+        size:5,
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        if (res.data != null) {
+          that.setData({
+            HouseLease: res.data,
+          })
+        }
+      }
+    })
+  },
+
+
+
+
   getProductIsRecommend: function () {//读取产品推荐
     var that = this;
     wx.request({
@@ -153,72 +182,7 @@ Page({
       }
     })
   },
-  getProductTwo: function () {//读取产品
-    var that = this;
-    wx.request({
-      url: app.globalData.apiUrl,
-      data: {
-        opt: 'getProductPageList',
-        where: "typeId=2",
-        page: 1,
-        size: 3,
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        if (res.data != null) {
-          that.setData({
-            productTwo: res.data,
-          })
-        }
-      }
-    })
-  },
-  getProductThree: function () {//读取产品
-    var that = this;
-    wx.request({
-      url: app.globalData.apiUrl,
-      data: {
-        opt: 'getProductPageList',
-        where: "typeId=3",
-        page: 1,
-        size: 3,
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        if (res.data != null) {
-          that.setData({
-            productThree: res.data,
-          })
-        }
-      }
-    })
-  },
-  getProductFour: function () {//读取产品
-    var that = this;
-    wx.request({
-      url: app.globalData.apiUrl,
-      data: {
-        opt: 'getProductPageList',
-        where: "typeId=4",
-        page: 1,
-        size: 3,
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        if (res.data != null) {
-          that.setData({
-            productFour: res.data,
-          })
-        }
-      }
-    })
-  },
+  
   //输入内容时
   searchActiveChangeinput: function (e) {
     const val = e.detail.value;

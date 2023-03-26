@@ -1,0 +1,5 @@
+/* pages/house/houseshow.wxss */
+
+@import '../assets/base.wxss';
+@import '../assets/common.wxss';
+@import '../assets/redemption.wxss';

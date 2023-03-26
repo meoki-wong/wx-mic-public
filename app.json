@@ -21,14 +21,18 @@
     "pages/user/user",
     "pages/order_details/order_details",
     "pages/pub_top/pub_top",
-    "pages/footer/footer"
+    "pages/footer/footer",
+     "pages/house/houselist",
+     "pages/house/houseshow",
+     "pages/noticeDetails/noticeDetails"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "小雪球咖饮",
+    "navigationBarTitleText": "住房保障中心",
     "navigationBarTextStyle": "black"
-    
-  }
-
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
 }

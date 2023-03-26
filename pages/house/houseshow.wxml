@@ -1,0 +1,277 @@
+<!-- pages/house/houseshow.wxml -->
+<view class='li'>
+  <import src="/wxParse/wxParse.wxml" />
+  <view class="wxParse">
+    <section>
+      <view class="navigation-bar">
+        <a class="z-01" href="javascript:void(0);"></a>
+        <SPAN>非住宅信息详情</SPAN>
+      </view>
+    </section>
+    <section>
+      <view class="project-details">
+        <view>
+          <view class="z-jifen"></view>
+          <h3>{{content.accountNo}}</h3>
+          <p></p>
+        </view>
+        <view class="m-project clearfix">
+          <dl>
+            <dt>房产管理单位：{{content.houseManageUnit}}</dt>
+            <dt>产权属性：{{content.houseAttribute}}</dt>
+            <dt>结&nbsp;&nbsp;构：{{content.structure}}</dt>
+            <dt>
+              坐落位置：
+              <asp:Label ID="seat" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dt>房屋所有权证号：{{content.houseOwnCertificateNo}}</dt>
+            <dt>
+              备案合同编号：
+              <asp:Label ID="filingContractNo" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dt>
+              主管单位名称：
+              <asp:Label ID="competentUnitName" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dt>
+              经营项目：
+              <asp:Label ID="businessItems" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dt>
+              承租单位名称(或个人)：
+              <asp:Label ID="lesseeName" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dt>
+              承租单位机构代码 （个人身份证号）：
+              <asp:Label ID="organizationCode" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dt>
+              承租人联系电话：
+              <asp:Label ID="contactNumber" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dd>
+              产权属性：
+              <asp:Label ID="houseAttribute" runat="server"></asp:Label>
+              &nbsp;
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              结&nbsp;&nbsp;构：
+              <asp:Label ID="structure" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dd>
+              坐落位置：
+              <asp:Label ID="seat" runat="server"></asp:Label>
+              &nbsp;
+            </dd>
+          </dl>
+        </view>
+        <view class="m-project clearfix">
+          <dl>
+            <dt>
+              房屋所有权证号：
+              <asp:Label ID="houseOwnCertificateNo" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dd>
+              备案合同编号：
+              <asp:Label ID="filingContractNo" runat="server"></asp:Label>
+              &nbsp;
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              主管单位名称：
+              <asp:Label ID="competentUnitName" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dd>
+              经营项目：
+              <asp:Label ID="businessItems" runat="server"></asp:Label>
+              &nbsp;
+            </dd>
+          </dl>
+        </view>
+        <view class="m-project clearfix">
+          <dl>
+            <dt>
+              承租单位名称(或个人)：
+              <asp:Label ID="lesseeName" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dd>
+              承租单位机构代码 （个人身份证号）：
+              <asp:Label ID="organizationCode" runat="server"></asp:Label>
+              &nbsp;
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              承租人联系电话：
+              <asp:Label ID="contactNumber" runat="server"></asp:Label>
+              &nbsp;
+            </dt>
+            <dd>
+              经营项目：
+              <asp:Label ID="Label4" runat="server"></asp:Label>
+              &nbsp;
+            </dd>
+          </dl>
+        </view>
+        <view class="m-turnplate02">
+          <view class="progress-radial progress-19">
+            <img src="..<%=Uplj %>" width="68" height="68" border="0" />
+          </view>
+        </view>
+      </view>
+    </section>
+    <SECTION>
+      <view class="basic-information">
+        <H4>基本信息</H4>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                <font class="xu">合同面积：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="contractArea" runat="server"></asp:Label>
+                  &nbsp;（㎡）
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <font class="xu">正常面积：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="normalArea" runat="server"></asp:Label>
+                  &nbsp;（㎡）
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <font class="xu">搭建面积：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="constructionArea" runat="server"></asp:Label>
+                  &nbsp;（㎡）
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <font class="xu">租金标准：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="rentStandard" runat="server"></asp:Label>
+                  &nbsp;（元）
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <font class="xu">评估租金标准：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="assessmentRentStandard" runat="server"></asp:Label>
+                  &nbsp;（元）
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <font class="xu">租赁价格评估时间：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="leasePriceEvaluationTime" runat="server"></asp:Label>
+                  &nbsp;
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <font class="xu">月上缴局：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="monthlyPayment" runat="server"></asp:Label>
+                  &nbsp;（元）
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <font class="xu">月协议租金：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="monthlyAgreedRent" runat="server"></asp:Label>
+                  &nbsp;（元）
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <font class="xu">押金：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="deposit" runat="server"></asp:Label>
+                  &nbsp;（元）
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <font class="xu">合同开始日期：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="contractStartDate" runat="server"></asp:Label>
+                  &nbsp;
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <font class="xu">合同到期日期：</font>
+              </th>
+              <td>
+                <font class="xu">
+                  <asp:Label ID="contractEndDate" runat="server"></asp:Label>
+                  &nbsp;
+                </font>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </view>
+    </SECTION>
+    <section class="m-expansion">
+      <view class="item-description clearfix">
+        <text>备注</text>
+        <text class="s-03"></text>
+      </view>
+      <view>
+        <asp:Label ID="remarks" runat="server"></asp:Label>
+      </view>
+    </section>
+  </view>
+</view>

@@ -4,7 +4,7 @@
 <view class='li'>
 <navigator url='/pages/noticeDe/noticeDe?id={{item.articleId}}'>
   <view class='p'>{{item.title}}</view>
-  <view class='ckxq'>查看详情</view>
+  <view class='ckxq'>{{item.updateTime}}</view>
   </navigator>
 </view>
   </block>

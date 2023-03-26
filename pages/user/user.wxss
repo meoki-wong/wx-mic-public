@@ -160,3 +160,25 @@
   height: 50rpx;
   line-height: 50rpx;
 }
+
+.li-notice{
+  position: relative;
+}
+.notice-num{
+  min-width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  position: absolute;
+  right: 20rpx;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rpx;
+  box-sizing: border-box;
+}

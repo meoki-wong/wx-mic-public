@@ -8,8 +8,55 @@
 .search{background: #ededed;height: 72rpx;border-radius: 20rpx;flex: 1;display: flex;display: -webkit-flex;align-items: center;box-sizing: border-box;padding: 0 20rpx;}
 .search image{width: 37rpx;height: 37rpx;display: block;margin-right: 18rpx;}
 .search input{font-size: 26rpx;color: #a4a4a4;flex: 1;}
-.list{display: flex;display: -webkit-flex;flex-wrap: wrap;margin-top: 20rpx;}
-.li{text-align: center;font-size: 24rpx;color: #333;width: 33.33%;margin-bottom: 30rpx;}
+.list{margin-top: 20rpx; flex: auto; height: 100vh;}
+.li{
+    text-align: left;font-size: 24rpx;color: #333;width: 100%;
+    border-bottom: 3rpx solid #eee;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    min-height: 80rpx;
+    align-items: center;
+    font-size: 27rpx;
+    font-weight: 400;
+}
+.li .title-item{
+    display: flex;
+    justify-content: space-between;
+}
 .li_img{width: 168rpx;height: 135rpx;margin: 0 auto 10rpx;position: relative;}
 .li .pic{display: block;width: 100%;height: 100%;}
 .tejia{width: 60rpx;height: 60rpx;display: block;position: absolute;top: -3rpx;left: -5rpx;}
+
+
+.list-contain{
+    display: flex;
+}
+.list-contain .nav-bar{
+    width: 300rpx;
+    background-color: #eee;
+    min-height: 100vh;
+}
+.nav-bar .nav-item{
+    height: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3rpx solid #bbb;
+    font-weight: 600;
+    font-size: 28rpx;
+}
+.nav-bar .active_nav{
+    color: red;
+    position: relative;
+}
+.nav-bar .active_nav::before{
+    content: '';
+    width: 10rpx;
+    height: 70%;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 15%;
+}

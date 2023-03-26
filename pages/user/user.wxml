@@ -49,9 +49,9 @@
   </navigator>
 </view>
 <view class='list'>
-   <navigator class='li' url='/pages/bag/bag'>
+   <navigator class='li li-notice' url='/pages/noticeDetails/noticeDetails'>
     <image src='../images/uesr_icon1.png'></image>
-    <text>我的钱包</text>
+    <text>我的提醒</text><text class="notice-num">{{0 > 99 ? '99+' : 0}}</text>
   </navigator>
   <navigator class='li' url='/pages/integral/integral'>
     <image src='../images/uesr_icon2.png'></image>

@@ -21,6 +21,8 @@ Page({
     });
     that.getInfo(options);//读取详细
   },
+
+
   getInfo: function (options) {//读取详细
     var that = this;
     wx.request({
@@ -34,9 +36,12 @@ Page({
       },
       success: function (res) {
         if (res.data != null) {
+          let year = new Date(res.data.updateTime).getFullYear()
+              let month = new Date(res.data.updateTime).getMonth() + 1
+              let day = new Date(res.data.updateTime).getDate()
+              res.data.updateTime = `${year}-${month}-${day}`
           that.setData({
             model: res.data,
-            content: WxParse.wxParse('article_content', 'html', res.data.content, that),
           })
           wx.setNavigationBarTitle({ title: res.data.title });
         }

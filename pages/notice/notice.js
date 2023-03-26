@@ -82,6 +82,12 @@ Page({
             for (var i in newList) {
               list.push(newList[i]);
             }
+            list.map(item=>{
+              let year = new Date(item.updateTime).getFullYear()
+              let month = new Date(item.updateTime).getMonth() + 1
+              let day = new Date(item.updateTime).getDate()
+              item.updateTime = `${year}-${month}-${day}`
+            })
             that.setData({
               list: list,
               isGet: true,

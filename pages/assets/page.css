@@ -1,0 +1,51 @@
+
+
+
+
+
+
+.mainL {
+	WIDTH: 100%; DISPLAY: inline; FLOAT: left
+}
+.mainR {
+	WIDTH: 100%; DISPLAY: inline; FLOAT: right; _float: left
+}
+.menu {
+	MARGIN-TOP: 18px; WIDTH: 96%; MARGIN-LEFT: 9px
+}
+.menuBox {
+	BORDER-BOTTOM: #ccc 1px solid; WIDTH: 100%
+}
+.menuT {
+	LINE-HEIGHT: 40px; FONT-FAMILY: Î¢ÈíÑÅºÚ, "Microsoft YaHei", STHeiti, sans-serif; HEIGHT: 40px; COLOR: #7a3b0f; FONT-SIZE: 16px; CURSOR: pointer
+}
+.menuC {
+	DISPLAY: none
+}
+.menuBox .db.menuC {
+	DISPLAY: block
+}
+.menuC UL LI {
+	MARGIN-BOTTOM: 10px; MARGIN-LEFT: 30px
+}
+.menuC UL LI A {
+	FONT-FAMILY: Î¢ÈíÑÅºÚ, "Microsoft YaHei", STHeiti, sans-serif; COLOR: #414141; TEXT-DECORATION: none
+}
+.menuC UL LI A:visited {
+	FONT-FAMILY: Î¢ÈíÑÅºÚ, "Microsoft YaHei", STHeiti, sans-serif; COLOR: #414141; TEXT-DECORATION: none
+}
+.menuC UL LI A:link {
+	FONT-FAMILY: Î¢ÈíÑÅºÚ, "Microsoft YaHei", STHeiti, sans-serif; COLOR: #414141; TEXT-DECORATION: none
+}
+.menuC UL LI A.curr {
+	COLOR: #83481f
+}
+.menuC UL LI A.curr:visited {
+	COLOR: #83481f
+}
+.menuC UL LI A.curr:link {
+	COLOR: #83481f
+}
+.menuC UL LI A:hover {
+	COLOR: #83481f
+}

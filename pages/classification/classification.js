@@ -7,13 +7,19 @@ Page({
    */
   data: {
     hostUrl: app.globalData.hostUrl,
+    navList: [
+      {title: "租房1", id:1},
+      {title: "租房2", id:2},
+      {title: "租房3", id:3},
+    ],
+    activeNav: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.getListData(1)
   },
 
   /**
@@ -51,6 +57,7 @@ Page({
       }
     })
   },
+  
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -96,4 +103,42 @@ Page({
       url: '/pages/goods_list/goods_list'
     })
   },
+  clickNavItem: function(index){
+    this.setData({
+      activeNav: index.currentTarget.dataset.order
+    })
+    this.getListData(index.currentTarget.dataset.order + 1)
+      
+  },
+  getListData(index){
+    var that = this;
+    wx.request({
+      url: app.globalData.apiUrl,
+      data: {
+        opt: 'getHousePageList',
+        where: `accountState=${index}`,
+        page: 1,
+        size: 3,
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        if (res.data != null) {
+          res.data.map(item=>{
+            let year = new Date(item.contractStartDate).getFullYear()
+            let month = new Date(item.contractStartDate).getMonth() + 1
+            let day = new Date(item.contractStartDate).getDate()
+            item.contractStartDate = `${year}-${month}-${day}`
+          })
+          that.setData({
+            Housedaipai: res.data,
+          })
+        }
+      },
+      fail: (err)=>{
+        console.log('接口报错', err);
+      }
+    })
+  }
 })

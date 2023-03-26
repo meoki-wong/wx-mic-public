@@ -29,12 +29,13 @@
     },
     "useStaticServer": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "condition": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.17.0",
-  "appid": "wxf00197ae14b5a61a",
-  "projectname": "%E7%BB%B4%E6%96%B0%E5%95%86%E5%9F%8E",
+  "appid": "wx280f562ea9f843ba",
+  "projectname": "cd9bbc076df79906214c9afdc22c40da",
   "condition": {},
   "packOptions": {
     "ignore": [],

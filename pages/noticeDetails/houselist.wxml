@@ -1,0 +1,14 @@
+<!-- pages/house/houselist.wxml -->
+<scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="bindDownLoad" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+  <block wx:for="{{list}}" wx:key="{{item.id}}">
+    <view class='li'>
+      <navigator url='/pages/house/houseshow?id={{item.id}}'>
+        <view class='p'>{{item.accountNo}}{{item.seat}}</view>
+        <view class='ckxq'>{{item.addTime}}</view>
+      </navigator>
+    </view>
+  </block>
+</scroll-view>
+<view>
+  <loading hidden="{{hidden}}">加载中...</loading>
+</view>
